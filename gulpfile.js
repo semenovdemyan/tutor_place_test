@@ -21,7 +21,7 @@ const paths = {
 };
 
 function compilePug() {
-  return src('src/pug/*.pug')
+  return src('src/pug/**/*.pug')
     .pipe(pug({ pretty: true }))
     .pipe(dest(paths.dist))
     .pipe(browserSync.stream());
