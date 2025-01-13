@@ -17,6 +17,7 @@ const paths = {
   pug: 'src/pug/**/*.pug',
   scss: 'src/scss/**/*.scss',
   js: 'src/js/**/*.js',
+  images: 'src/assets/images/**/*',
   dist: 'dist/',
 };
 
@@ -43,6 +44,11 @@ function compileJs() {
     .pipe(browserSync.stream());
 }
 
+// Задача для копирования изображений
+function copyImages() {
+  return src(paths.images).pipe(dest(paths.dist + 'assets/images')); // Копируем в dist/assets/images
+}
+
 function clean() {
   return deleteAsync([paths.dist]);
 }
@@ -56,10 +62,11 @@ function serve() {
   watch(paths.pug, compilePug);
   watch(paths.scss, compileScss);
   watch(paths.js, compileJs);
+  watch(paths.images, copyImages); // Добавляем отслеживание изображений
 }
 
 export default series(
   clean,
-  parallel(compilePug, compileScss, compileJs),
+  parallel(compilePug, compileScss, compileJs, copyImages), // Добавляем copyImages
   serve
 );

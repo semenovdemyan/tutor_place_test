@@ -1,11 +1,16 @@
-@use './blocks/expample-block' as *;
+@import 'variables';
+@import 'mixins';
+@import 'global';
+// @import 'header';
+// @import 'hero';
+// @import 'advantages';
 
 
 body {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: 'Involve', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #c1c1c1;
+  background: $background-color;
 }
 
 h1 {
