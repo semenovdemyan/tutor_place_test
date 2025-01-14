@@ -12,22 +12,26 @@
     text-align: center;
   }
 
-  &__item {
-    max-width: 450px;
-    min-height: 332px;
-    background-color: $secondary-color;
-    padding: 20px;
-    border-radius: 25px;
-  }
-
-  &__icon {
-    background-color: $secondary-color;
-  }
-
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
+    padding: 0 235px 54px;
+  }
+
+  &__item {
+    flex: 1 1 45%; /* элементы будут занимать не больше 45% ширины контейнера */
+    max-width: 450px;
+    min-height: 332px;
+    background-color: $secondary-color;
+    padding: 30px;
+    border-radius: 18px;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 18px;
   }
 }
