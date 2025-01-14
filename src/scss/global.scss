@@ -1,4 +1,9 @@
+html {
+  background: $background-color;
+}
+
 * {
+  // Сброс стилей
   color: $text-color;
   text-decoration: none;
   box-sizing: border-box;
@@ -7,4 +12,20 @@
   padding: 0;
   font-size: 0;
   font-size: initial;
+  border: none;
+  // Сброс стилей
+
+  font-family: $font-primary;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 16px 22px;
+  border: 1px solid $text-color;
+  border-radius: 15px;
+  background-color: transparent;
 }

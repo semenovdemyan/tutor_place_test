@@ -4,8 +4,8 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Курс по нейросетям
-    link(rel="stylesheet" href="css/normalize.min.css")
-    link(rel="stylesheet" href="css/main.min.css")
+    link(rel="stylesheet" type="text/css" href="css/normalize.min.css")
+    link(rel="stylesheet" type="text/css" href="css/main.min.css")
   body
     .container
       header.header
@@ -17,9 +17,9 @@ html(lang="ru")
             li.header__menu-item
               a.header__menu-link(href="#main") Главная
             li.header__menu-item
-              a.header__menu-link(href="#Advantages") Преимущества
+              a.header__menu-link(href="#advantages") Преимущества
             li.header__menu-item
-              button.header__btn Личный кабинет
+              button.btn.header__btn Личный&nbsp;кабинет
       section.hero
         .hero__content
           h1.hero__title
@@ -27,12 +27,12 @@ html(lang="ru")
               br
             span.hero__span может всё!
           p.hero__description Мы&nbsp;уже живем в&nbsp;этой удивительной реальности
-          button.hero__btn.btn-primary Погрузиться&nbsp;в&nbsp;новый&nbsp;мир
+          button.btn.hero__btn.btn-primary Погрузиться&nbsp;в&nbsp;новый&nbsp;мир
         .hero__image-wrapper
           img.hero__image(src="/assets/images/hero.svg" alt="hero image")
 
       section.advantages
-        h2.advantages__title Преимущества курса
+        h2.advantages__title(id="advantages") Преимущества курса
         p.advantages__description
           span.advantages__span Поможем создать 
           span.advantages__span корректный промт

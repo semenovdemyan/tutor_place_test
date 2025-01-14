@@ -1,0 +1,17 @@
+@import 'variables.scss';
+
+.hero {
+  display: flex;
+  justify-content: center;
+  &__span--gardient {
+    background-image: linear-gradient(
+      to left,
+      $accent-color 0%,
+      $accent-color-light 44%,
+      $accent-color-light-hover 100%
+    );
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}

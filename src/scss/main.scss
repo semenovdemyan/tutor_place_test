@@ -1,18 +1,12 @@
 @import 'variables';
-@import 'mixins';
 @import 'global';
-// @import 'header';
-// @import 'hero';
-// @import 'advantages';
+@import 'mixins';
+@import 'header';
+@import 'hero';
+@import 'advantages';
 
-
-body {
-  font-family: 'Involve', Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: $background-color;
-}
-
-h1 {
-  
+.container {
+  min-width: $mobile-min;
+  max-width: $desktop-max;
+  padding: 0 100px 30px;
 }

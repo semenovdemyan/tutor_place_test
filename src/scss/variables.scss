@@ -1,18 +1,22 @@
 // Цвета
 $background-color: #000;
-$text-color: #FFF;
+$text-color: #fff;
 $primary-color: #161524;
-$secondary-color: #1B1A2C;
-$accent-color: #F706A3;
-$accent-color-hover: #CA0078;
-$accent-color-light: #5A73EF;
-$accent-color-light-hover: #81F3F8;
+$secondary-color: #1b1a2c;
+$accent-color: #f706a3;
+$accent-color-hover: #ca0078;
+$accent-color-light: #5a73ef;
+$accent-color-light-hover: #81f3f8;
 
 // Шрифты
-$font-primary: 'Involve', Helvetica, sans-serif;
+$font-primary: 'Involve', Helvetica, Arial, sans-serif;
 
 // Размеры
-$desktop: 1200px;
-$tablet: 768px;
-$mobile: 320px;
- 
+$mobile-min: 320px;
+$mobile-max: 767px;
+
+$tablet-min: 768px;
+$tablet-max: 1365px;
+
+$desktop-min: 1366px;
+$desktop-max: 1920px;

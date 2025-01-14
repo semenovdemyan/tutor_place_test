@@ -1,0 +1,33 @@
+@import 'variables';
+
+.advantages {
+}
+
+.advantages__description {
+}
+
+.advantages {
+  &__title,
+  &__description {
+    text-align: center;
+  }
+
+  &__item {
+    max-width: 450px;
+    min-height: 332px;
+    background-color: $secondary-color;
+    padding: 20px;
+    border-radius: 25px;
+  }
+
+  &__icon {
+    background-color: $secondary-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}
