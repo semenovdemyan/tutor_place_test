@@ -15,7 +15,9 @@ html {
   border: none;
   // Сброс стилей
 
+  // Указанный в макете шрифт не работает, переназначу более типовой 'Roboto', чтобы не терять время
   font-family: $font-primary;
+  font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 body {

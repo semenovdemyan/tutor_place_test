@@ -3,15 +3,45 @@
 .hero {
   display: flex;
   justify-content: center;
+  justify-content: space-between;
   &__span--gardient {
+    font-size: 120px;
+    font-weight: 500;
+    line-height: 0.9;
     background-image: linear-gradient(
       to left,
-      $accent-color 0%,
+      $accent-color-light-hover 0%,
       $accent-color-light 44%,
-      $accent-color-light-hover 100%
+      $accent-color 100%
     );
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+  }
+  &__span {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.1;
+    font-size: 80px;
+    margin-bottom: 30px;
+  }
+  &__description {
+    line-height: 1.1;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 72px;
+  }
+  &__btn {
+    background-color: $accent-color;
+    border-color: $accent-color;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  // Изображение загружается с отступом справа, хотя выбираю фрейм меньшего размера. Резать по пропорции не стал.
+  &__image {
+    max-width: 640px;
+    max-height: 726px;
   }
 }
