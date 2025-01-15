@@ -1,12 +1,6 @@
 @import 'variables';
 
 .advantages {
-}
-
-.advantages__description {
-}
-
-.advantages {
   &__title,
   &__description {
     text-align: center;
@@ -21,7 +15,12 @@
     // font-family: $font-secondary;
     font-family: $font-dev;
   }
-
+  @media (max-width: $mobile-max) {
+    &__title {
+      // некорректно указан размер на макете
+      font-size: 36px;
+    }
+  }
   &__description {
     max-width: 680px;
     margin: 0 auto;
@@ -49,6 +48,12 @@
   @media (max-width: $tablet-max) {
     &__list {
       padding: 0 30px 54px;
+    }
+  }
+
+  @media (max-width: $mobile-max) {
+    &__list {
+      padding: 0 15px 6px;
     }
   }
 

@@ -40,4 +40,9 @@ body {
   border: 1px solid $text-color;
   border-radius: 15px;
   background-color: transparent;
+
+  @media (max-width: $mobile-max) {
+    border-radius: 9px;
+    margin-bottom: 60px;
+  }
 }

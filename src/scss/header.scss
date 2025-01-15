@@ -78,6 +78,10 @@
   padding: 24px 0;
   margin-bottom: 96px;
 
+  @media (max-width: $mobile-max) {
+    margin-bottom: 18px;
+  }
+
   // Скрытие меню по умолчанию на мобильных устройствах
   &__menu {
     display: flex;
