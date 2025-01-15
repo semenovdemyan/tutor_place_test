@@ -21,10 +21,6 @@ html(lang="ru")
           a.header__logo-link(href="#")
             img.header__logo-image(src="/assets/images/logo.svg" alt="logo")
         nav.header__nav
-          button.header__burger(type="button")
-            span
-            span
-            span
           ul.header__menu
             li.header__menu-item
               a.header__menu-link(href="#main") Главная
@@ -32,6 +28,12 @@ html(lang="ru")
               a.header__menu-link(href="#advantages") Преимущества
             li.header__menu-item
               button.btn.header__btn Личный&nbsp;кабинет
+
+        button.header__burger(type="button")
+          span.burger__span
+          span.burger__span
+          span.burger__span
+          nav.burger__nav
 
       section.hero
         .hero__content
