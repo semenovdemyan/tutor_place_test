@@ -22,7 +22,6 @@
     font-size: 24px;
     line-height: 1.1;
     font-weight: 400;
-    // font-family: $font-primary;
     font-family: $font-dev;
     opacity: 0.6;
 
@@ -66,33 +65,12 @@
       display: inline-block;
       padding: 10px 20px;
     }
-  }
-}
 
-// BURGER MENU
-@import 'variables';
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 24px 0;
-  margin-bottom: 96px;
-
-  @media (max-width: $mobile-max) {
-    margin-bottom: 18px;
-  }
-
-  // Скрытие меню по умолчанию на мобильных устройствах
-  &__menu {
-    display: flex;
-    justify-content: space-between;
-    width: 707px;
     @media (max-width: $tablet-max) {
       display: none;
     }
   }
 
-  // Стиль кнопки бургер-меню
   &__burger {
     display: none;
     flex-direction: column;
@@ -114,7 +92,6 @@
     }
   }
 
-  // Стиль для мобильного меню
   &__nav.open ul {
     display: flex;
     flex-direction: column;
@@ -131,15 +108,8 @@
   }
 
   &__menu-item {
-    padding: 20px;
     font-size: 24px;
     text-align: center;
     color: $text-color;
-
-    a {
-      color: $text-color;
-    }
   }
 }
-
-// BURGER MENU

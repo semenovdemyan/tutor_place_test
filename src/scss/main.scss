@@ -8,15 +8,13 @@
   min-width: $mobile-min;
   max-width: $desktop-max;
   padding: 0 260px 30px;
-}
-@media (max-width: $tablet-max) {
-  .container {
+  overflow: hidden;
+
+  @media (max-width: $tablet-max) {
     padding: 0 30px 30px;
   }
-}
 
-@media (max-width: $mobile-max) {
-  .container {
-    padding: 0 15px 30px;
+  @media (max-width: $mobile-max) {
+    padding: 0 15px 6px;
   }
 }

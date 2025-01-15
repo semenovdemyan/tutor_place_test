@@ -9,9 +9,9 @@ $accent-color-light: #5a73ef;
 $accent-color-light-hover: #81f3f8;
 
 // Шрифты
-$font-primary: 'Evolventa', serif;
-$font-secondary: 'Involve', Helvetica, Arial, sans-serif;
-$font-dev: 'Roboto', Helvetica, Arial, sans-serif;
+// На макете есть шрифт того же семейства Evolventa, добавлять не стал
+$font-primary: Evolventa, Helvetica, sans-serif;
+$font-dev: 'Roboto', Helvetica, sans-serif;
 
 // Размеры
 $mobile-min: 320px;

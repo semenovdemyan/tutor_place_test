@@ -10,16 +10,14 @@ html {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  font-size: 0;
-  font-size: initial;
-  border: none;
-  // Сброс стилей
 
   // Указанный в макете шрифт не работает
   // + отсутствует на сайте google.fonts.
   // переназначу более типовой 'Roboto', чтобы не терять время
   font-family: $font-primary;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  // font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: initial;
+  border: none;
 
   transition: all 0.3s;
 }

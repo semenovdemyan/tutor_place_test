@@ -9,32 +9,10 @@ html(lang="ru")
     style.
       @font-face
         font-family: 'Evolventa';
-        src: url('/assets/fonts/Evolventa/Evolventa-Regular.ttf') format('ttf'),
-          url('/assets/fonts/Evolventa/Evolventa-Regular.otf') format('otf');
+        src: local('Evolventa'), url('/assets/fonts/Evolventa/Evolventa-Regular.woff') format('woff');
         font-weight: normal;
         font-style: normal;
-
-      @font-face
-        font-family: 'Evolventa';
-        src: url('/assets/fonts/Evolventa/Evolventa-Bold.ttf') format('ttf'),
-          url('/assets/fonts/Evolventa/Evolventa-Bold.otf') format('otf');
-        font-weight: bold;
-        font-style: normal;
-
-      @font-face
-        font-family: 'Involve';
-        src: url('/assets/fonts/Involve-Regular.ttf') format('ttf'),
-          url('/assets/fonts/Involve-Regular.otf') format('otf');
-        font-weight: normal;
-        font-style: normal;
-
-      @font-face
-        font-family: 'Involve';
-        src: url('/assets/fonts/Involve-Bold.ttf') format('ttf'),
-          url('/assets/fonts/Involve-Bold.otf') format('otf');
-        font-weight: bold;
-        font-style: normal;
-    script defer(src="js/main.min.js")
+    script defer(src="src/js/main.js")
 
   body
     .container
@@ -57,12 +35,13 @@ html(lang="ru")
 
       section.hero
         .hero__content
-          h1.hero__title
-            div.hero__div--gardient Нейросеть
-              br
-            div.hero__div может всё!
-          p.hero__description Мы&nbsp;уже живем в&nbsp;этой удивительной реальности
-          button.btn.hero__btn.hero__btn--primary Погрузиться&nbsp;в&nbsp;новый&nbsp;мир
+          div.hero__content-wrapper
+            h1.hero__title
+              div.hero__div--gardient Нейросеть
+                br
+              div.hero__div может всё!
+            p.hero__description Мы&nbsp;уже живем в&nbsp;этой удивительной реальности
+            button.btn.hero__btn.hero__btn--primary Погрузиться&nbsp;в&nbsp;новый&nbsp;мир
         .hero__image-wrapper
           img.hero__image(src="/assets/images/hero.svg" alt="hero image")
 
