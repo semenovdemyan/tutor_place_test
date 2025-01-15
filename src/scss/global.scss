@@ -15,9 +15,18 @@ html {
   border: none;
   // Сброс стилей
 
-  // Указанный в макете шрифт не работает, переназначу более типовой 'Roboto', чтобы не терять время
+  // Указанный в макете шрифт не работает
+  // + отсутствует на сайте google.fonts.
+  // переназначу более типовой 'Roboto', чтобы не терять время
   font-family: $font-primary;
   font-family: 'Roboto', Helvetica, sans-serif;
+
+  transition: all 0.3s;
+}
+
+::selection {
+  background: #ff009dbd;
+  color: $text-color;
 }
 
 body {
