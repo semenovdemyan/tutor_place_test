@@ -34,6 +34,7 @@ html(lang="ru")
           url('/assets/fonts/Involve-Bold.otf') format('otf');
         font-weight: bold;
         font-style: normal;
+    script defer(src="js/main.min.js")
 
   body
     .container
@@ -42,6 +43,10 @@ html(lang="ru")
           a.header__logo-link(href="#")
             img.header__logo-image(src="/assets/images/logo.svg" alt="logo")
         nav.header__nav
+          button.header__burger(type="button")
+            span
+            span
+            span
           ul.header__menu
             li.header__menu-item
               a.header__menu-link(href="#main") Главная

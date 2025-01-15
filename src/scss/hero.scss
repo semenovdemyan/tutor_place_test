@@ -61,3 +61,24 @@
     max-height: 726px;
   }
 }
+
+// COMMENT
+// .hero {
+//   display: flex;
+//   justify-content: center;
+//   justify-content: space-between;
+
+//   @media (max-width: $mobile-max) {
+//     .hero__content {
+//       padding: 0 15px;
+//       width: 100%;
+//     }
+//   }
+// }
+
+// COMMENT
+@media (max-width: $tablet-max) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+}

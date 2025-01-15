@@ -1,6 +1,5 @@
 @import 'variables';
 @import 'global';
-@import 'mixins';
 @import 'header';
 @import 'hero';
 @import 'advantages';
@@ -9,4 +8,9 @@
   min-width: $mobile-min;
   max-width: $desktop-max;
   padding: 0 260px 30px;
+}
+@media (max-width: $tablet-max) {
+  .container {
+    padding: 0 30px 30px;
+  }
 }
