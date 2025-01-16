@@ -3,8 +3,12 @@
 @import 'header';
 @import 'hero';
 @import 'advantages';
+@import 'modal';
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-width: $mobile-min;
   max-width: $desktop-max;
   padding: 0 260px 30px;
