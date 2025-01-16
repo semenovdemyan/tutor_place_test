@@ -4,7 +4,6 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Курс по нейросетям
-    link(rel="stylesheet" type="text/css" href="css/normalize.min.css")
     link(rel="stylesheet" type="text/css" href="css/main.min.css")
     style.
       @font-face
@@ -12,12 +11,11 @@ html(lang="ru")
         src: local('Evolventa'), url('/assets/fonts/Evolventa/Evolventa-Regular.woff') format('woff');
         font-weight: normal;
         font-style: normal;
-    script defer(src="src/js/main.js")
+    script(src="js/main.js", defer)
 
   body
     .container
       section.modal
-        .modal-overlay
         .modal-container
           button.modal__close-btn(type="button")
             span.modal__close-span
@@ -30,6 +28,7 @@ html(lang="ru")
               label(for="email")
               input(type="email" id="email" name="email" placeholder=" Введите ваш e-mail" required)
               button.btn.modal__btn(type="submit") Оплатить курс
+
       header.header
         .header__logo
           a.header__logo-link(href="#")

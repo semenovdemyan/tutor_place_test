@@ -1,56 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Получаем элементы
-  const openModalBtn = document.querySelector('.open-modal-btn'); // Кнопка для открытия модалки
-  const modalContainer = document.querySelector('.modal'); // Модальное окно
-  // const modalOverlay = document.querySelector('.modal-overlay');
-  const closeModalBtn = document.querySelector('.modal__close-btn');
-  const modalForm = document.querySelector('.modal form');
-
-  console.log('DOMContentLoaded: Скрипт загружен.');
-
-  // Проверяем, что элементы существуют
-  if (
-    !openModalBtn ||
-    !modalContainer ||
-    !modalOverlay ||
-    !closeModalBtn ||
-    !modalForm
-  ) {
-    console.log('Один или несколько элементов не были найдены на странице.');
-    return; // Прекращаем выполнение, если что-то не найдено
-  }
+  const modal = document.querySelector('#modal');
+  const openModalBtn = document.querySelector('.hero__btn.hero__btn--primary'); // кнопка для открытия
+  const closeModalBtn = document.querySelector('.modal__close-btn'); // кнопка для закрытия
+  const modalOverlay = document.querySelector('.modal-overlay'); // фон для затемнения и блюра
+  const modalForm = document.querySelector('#modalForm'); // форма внутри модалки
 
   // Открытие модального окна
   openModalBtn.addEventListener('click', () => {
-    console.log('Открытие модального окна.');
-    modalContainer.style.display = 'block'; // Показываем модалку
-    // modalOverlay.style.display = 'block'; // Показываем оверлей
+    modal.style.display = 'block'; // отображаем модальное окно
+    modal.showModal(); // открытие диалога
+    modalOverlay.style.filter = 'blur(5px)'; // применяем блюр на фоне
   });
 
-  // Закрытие модального окна по кнопке
+  // Закрытие модального окна
   closeModalBtn.addEventListener('click', () => {
-    console.log('Закрытие модального окна.');
-    modalContainer.style.display = 'none'; // Скрываем модалку
-    // modalOverlay.style.display = 'none'; // Скрываем оверлей
+    modal.style.display = 'none'; // скрываем модальное окно
+    modal.close(); // закрытие диалога
+    modalOverlay.style.filter = ''; // убираем блюр с фона
   });
 
-  // Закрытие модального окна при клике на фон (overlay)
-  modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) {
-      // Проверяем, что клик был по самому overlay
-      console.log('Клик на оверлей. Закрытие модалки.');
-      modalContainer.style.display = 'none'; // Скрываем модалку
-      // modalOverlay.style.display = 'none'; // Скрываем оверлей
+  // Закрытие модального окна при клике вне области модалки
+  window.addEventListener('click', (e) => {
+    if (e.target === modal && modalOverlay) {
+      modal.style.display = 'none'; // скрываем модальное окно
+      modal.close(); // закрытие диалога
+      modalOverlay.style.filter = ''; // убираем блюр с фона
     }
   });
 
-  // Обработчик отправки формы
-  modalForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Предотвращаем стандартное поведение формы (перезагрузку страницы)
-    console.log('Форма отправлена!');
-
-    // Закрытие модального окна
-    modalContainer.style.display = 'none';
-    // modalOverlay.style.display = 'none';
+  // Остановка прокрутки при отправке формы
+  modalForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // предотвращаем стандартное поведение формы (отправка данных и перезагрузка страницы)
+    alert('Форма отправлена!'); // тут можно добавить логику для отправки данных, если нужно
   });
 });
