@@ -23,10 +23,11 @@ html(lang="ru")
           .modal__content
             h3.modal__title Овладей нейросетями!
             p.modal__description Получи в подарок доступ ко всем курсам
-            img(src="/assets/images/presents.svg" alt="presents")
+            img.modal__img(src="/assets/images/presents.svg" alt="presents")
             form#modalForm
               label(for="email")
-              input.modal__input(type="email" id="email" name="email" placeholder=" Введите e-mail" required)
+              input.modal__input(type="email" id="email" name="email" placeholder="Введите e-mail" required value="")
+              span.error-message Ошибка
               button.btn.hero__btn.hero__btn--primary.modal__btn(type="submit") Оплатить
 
       header.header
@@ -46,8 +47,15 @@ html(lang="ru")
           span.burger__span
           span.burger__span
           span.burger__span
-          nav.burger__nav
-
+        nav.burger__nav
+          ul.burger__menu
+            li.header__menu-item
+              a.header__menu-link(href="#main") Главная
+            li.header__menu-item
+              a.header__menu-link(href="#advantages") Преимущества
+            li.header__menu-item
+              button.btn.header__btn Личный&nbsp;кабинет
+          div.burger-blur
       section.hero
         .hero__content
           div.hero__content-wrapper

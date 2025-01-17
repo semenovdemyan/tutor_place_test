@@ -6,13 +6,20 @@
   padding: 24px 0;
   margin-bottom: 96px;
 
-  @media (max-width: $desktop-min) {
+  &__burger {
+    z-index: 999999999;
+    display: none;
+  }
+  @media (max-width: $tablet-max) {
+    margin-bottom: 0;
+    flex-wrap: wrap;
     &__nav {
       display: none;
     }
   }
 
   &__logo {
+    z-index: 999999999;
     margin-right: 25px;
     height: 53px;
     &:hover {
@@ -75,14 +82,17 @@
     }
   }
 
-  // Для мобильных устройств (меню скрыто)
+  // Скрыть меню на мобильных устройствах
   @media (max-width: $tablet-max) {
     &__menu {
-      display: none; // Скрыть меню на мобильных устройствах
+      display: none;
+    }
+    &__btn {
+      margin-bottom: 25px;
     }
 
     &__burger {
-      display: flex; // Показываем бургер-меню на мобильных устройствах
+      display: flex;
       flex-direction: column;
       justify-content: space-around;
       height: 20px;
@@ -100,8 +110,7 @@
       }
     }
 
-    // Стили для мобильного меню
-
+    // BURGER MENU
     ul {
       display: flex;
       flex-direction: column;
@@ -122,11 +131,39 @@
   }
 }
 
-// BURGER NAV
-.header__burger {
-  @media (min-width: $desktop-min) {
-    position: absolute;
+.burger__nav {
+  background-color: $background-color;
+  backdrop-filter: blur(20px);
+  display: none;
+  width: 100vw;
+  right: -15px;
+  position: absolute;
+  padding-top: 100px;
+  @media (max-width: $tablet-max) {
     display: none;
   }
+  &.active {
+    width: 104.5%;
+    min-height: 280px;
+    padding-left: 45px;
+    padding-right: 30px;
+
+    display: block;
+    top: -15px;
+    left: -30px;
+  }
 }
-// BURGER NAV
+
+.burger__menu {
+  display: none;
+}
+
+.burger__menu .header__menu-item {
+  display: flex;
+  justify-content: space-around;
+}
+
+.burger__menu .header__menu-item:last-child {
+  margin-top: 20px;
+}
+// BURGER MENU

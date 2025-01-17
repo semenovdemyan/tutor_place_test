@@ -68,6 +68,7 @@ $text-center: center;
       }
     }
   }
+
   &__input {
     width: 100%;
     padding: 18px;
@@ -78,12 +79,46 @@ $text-center: center;
     font-size: $base-font-size;
     line-height: $base-line-height;
     text-align: $text-center;
+    outline: none;
 
-    &::placeholder {
-      font-size: $base-font-size;
-      font-weight: 400;
-      line-height: $base-line-height;
-      text-align: $text-center;
+    // Базовое состояние для пустого поля (placeholder виден)
+    &:placeholder-shown {
+      border-color: transparent; // Пустое поле не имеет видимой рамки.
+    }
+
+    // :valid (корректно введённый email)
+    &:valid {
+      border-color: $accent-color-light-hover;
+    }
+
+    // :invalid (некорректное поле, но только если не пустое)
+    &:invalid:not(:placeholder-shown) {
+      border-color: $accent-color;
+    }
+
+    // Состояние :hover
+    &:hover {
+      border-color: $accent-color-light-hover;
+
+      // Для плейсхолдера при наведении
+      &::placeholder {
+        color: $text-color;
+      }
+    }
+
+    // :hover:invalid
+    &:hover:invalid:not(:placeholder-shown) {
+      border-color: $accent-color;
+    }
+
+    // :focus и :active
+    &:focus,
+    &:active {
+      border-color: $accent-color-light-hover;
+
+      &::placeholder {
+        color: $text-color;
+      }
     }
   }
 
@@ -98,4 +133,64 @@ form#modalForm {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.error-message {
+  display: none;
+  position: relative;
+  top: -6px;
+  color: $accent-color;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+// MOBILE
+@media (max-width: $mobile-max) {
+  .modal {
+    padding: 0 15px;
+
+    &-container {
+      width: 100%;
+      padding: 15px 15px 30px;
+      border-radius: 14px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 42px;
+    }
+
+    &__description {
+      display: none;
+    }
+
+    .modal__img {
+      display: none;
+    }
+
+    &__close-btn {
+      height: 24px;
+      width: 24px;
+      margin-bottom: 15px;
+
+      span {
+        width: 30px;
+        height: 2px;
+      }
+    }
+
+    &__input {
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+  }
+}
+
+.modal__img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
